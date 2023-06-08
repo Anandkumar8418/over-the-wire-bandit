@@ -79,6 +79,21 @@ strings data.txt | grep -oP '=+\s*\K\S+'(to get password from file for lvl 10 G7
 <!-- Level 10 -->
 ssh bandit10@bandit.labs.overthewire.org -p 2220 
 G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+ls
+base64 -d data.txt(got password for lvl11 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM)
+
+
+<!-- Level 11 -->
+ssh bandit11@bandit.labs.overthewire.org -p 2220 
+6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
+ls
+tr 'A-Za-z' 'N-ZA-Mn-za-m' < data.txt(got password for level12 JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv)
+
+
+<!-- Level 12 -->
+ssh bandit12@bandit.labs.overthewire.org -p 2220 
+JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+
 
 
 
