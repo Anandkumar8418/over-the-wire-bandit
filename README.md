@@ -93,19 +93,54 @@ tr 'A-Za-z' 'N-ZA-Mn-za-m' < data.txt(got password for level12 JVNBBFSmZwKKOP0Xb
 <!-- Level 12 -->
 ssh bandit12@bandit.labs.overthewire.org -p 2220 
 JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+mkdir /tmp/idk (making temp directory)
+cp data.txt /tmp/idk
+cd /tmp/idk
+xxd -r data.txt > bandit( msg shown bandit: gzip compressed data, was "data2.bin", last modified: Sun Apr 23 18:04:23 2023, max compression, from Unix, original size modulo 2^32 581
+)
+mv bandit bandit.gz
+gunzip bandit.gz
+file bandit
+mv bandit bandit.bz2
+bzip2 -d bandit.bz2
+file bandit
+mv bandit bandit.gz
+gunzip bandit.gz
+file bandit
+mv bandit bandit.tar
+tar -xf bandit.tar
+file data5.bin
+mv data5.bin data5.tar
+tar -xf data5.tar
+file data6.bin
+mv data6.bin data6.bz2 
+bzip2 -d data6.bz2
+mv data6 data6.tar
+tar -xf data6.tar
+file data8
+mv data8.bin data8.gz
+gunzip data8.gz
+cat data8 (password for level13 is wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw)
 
 
+<!-- Level 13 -->
+ssh bandit13@bandit.labs.overthewire.org -p 2220 
+wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
+ls(sshkey.private)
+ssh -i sshkey.private bandit14@localhost -p 2220
+cd /etc/bandit_pass/
+ls
+cat bandit14(i got the password for level 14 fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq)
+
+<!-- Level 14 -->
+ssh bandit14@bandit.labs.overthewire.org -p 2220 
+fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+nc localhost 30000(then i pasted the password for level 14 )
+fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq( i got the password for level15 jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Level 15 -->
+ssh bandit15@bandit.labs.overthewire.org -p 2220 
+jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+openssl s_client -connect localhost:30001
+jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt( i got password of level 16 JQttfApK4SeyHwDlI9SXGR50qclOAil1)
